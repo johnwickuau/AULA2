@@ -61,7 +61,7 @@ function losango(){
     document.getElementById("resultado").textContent = "A área do losango é: " + resultado;
 }
 
-function círculo(){
+function circulo(){
     const raio = parseFloat(document.getElementById("raio-circulo").value);
     const resultado = Math.PI * Math.pow(raio, 2);
     document.getElementById("resultado").textContent = "A área do círculo é: " + resultado.toFixed(2);
