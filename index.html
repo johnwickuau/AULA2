@@ -1,193 +1,127 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
-    <style>
-        .caixa {
-            border: 1px solid #ccc;
-            padding: 20px;
-            margin: 10px;
-            width: 200px;
-            display: inline-block;
-            background-color: rgb(167, 4, 4)02, 0);
-        }
-    </style>
-</head>
-<body>
-    <h1>Calculadora</h1>
-    
-    <div class="container">
-        <div class="caixa">
-            <h2>Soma</h2>
-            <input type="number" id="num1-soma" placeholder="Número 1">
-            <input type="number" id="num2-soma" placeholder="Número 2">
-            <button onclick="soma()">Somar</button>
-        </div>
-
-        <div class="caixa">
-            <h2>Subtração</h2>
-            <input type="number" id="num1-sub" placeholder="Número 1">
-            <input type="number" id="num2-sub" placeholder="Número 2">
-            <button onclick="menos()">Subtrair</button>
-        </div>
-
-        <div class="caixa">
-            <h2>Multiplicação</h2>
-            <input type="number" id="num1-mult" placeholder="Número 1">
-            <input type="number" id="num2-mult" placeholder="Número 2">
-            <button onclick="mult()">Multiplicar</button>
-        </div>
-
-        <div class="caixa">
-            <h2>Divisão</h2>
-            <input type="number" id="num1-div" placeholder="Número 1">
-            <input type="number" id="num2-div" placeholder="Número 2">
-            <button onclick="div()">Dividir</button>
-        </div>
-
-        <div class="caixa">
-            <h2>Área do Triângulo</h2>
-            <input type="number" id="base-triangulo" placeholder="Base">
-            <input type="number" id="altura-triangulo" placeholder="Altura">
-            <button onclick="areatriangulo()">Calcular</button>
-        </div>
-        <div class="caixa">
-            <h2>Quadrado</h2>
-            <input type="number" id="lado" placeholder="lado">
-            <button onclick="quadrado()">Calcular</button>
-        </div>
-
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora</title>
+        <link rel="stylesheet" href="styles.css
+            ">
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+        
+        <div class="container">
             <div class="caixa">
-                <h2>Retângulo</h2>
-                <input type="number" id="base-retangulo" placeholder="Base">
-                <input type="number" id="altura-retangulo" placeholder="Altura">
-                <button onclick="retangulo()">Calcular</button>
+                <h2>Soma</h2>
+                <input type="number" id="num1-soma" placeholder="Número 1">
+                <input type="number" id="num2-soma" placeholder="Número 2">
+                <button onclick="soma()">Somar</button>
             </div>
 
             <div class="caixa">
-                <h2>Trapézio</h2>
-                <input type="number" id="base1-trapezio" placeholder="Base 1">
-                <input type="number" id="base2-trapezio" placeholder="Base 2">
-                <input type="number" id="altura-trapezio" placeholder="Altura">
-                <button onclick="trapezio()">Calcular</button>
+                <h2>Subtração</h2>
+                <input type="number" id="num1-sub" placeholder="Número 1">
+                <input type="number" id="num2-sub" placeholder="Número 2">
+                <button onclick="menos()">Subtrair</button>
+            </div>
+
+            <div class="caixa">
+                <h2>Multiplicação</h2>
+                <input type="number" id="num1-mult" placeholder="Número 1">
+                <input type="number" id="num2-mult" placeholder="Número 2">
+                <button onclick="mult()">Multiplicar</button>
+            </div>
+
+            <div class="caixa">
+                <h2>Divisão</h2>
+                <input type="number" id="num1-div" placeholder="Número 1">
+                <input type="number" id="num2-div" placeholder="Número 2">
+                <button onclick="div()">Dividir</button>
+            </div>
+
+            <div class="caixa">
+                <h2>Área do Triângulo</h2>
+                <input type="number" id="base-triangulo" placeholder="Base">
+                <input type="number" id="altura-triangulo" placeholder="Altura">
+                <button onclick="areatriangulo()">Calcular</button>
+            </div>
+            <div class="caixa">
+                <h2>Quadrado</h2>
+                <input type="number" id="lado" placeholder="lado">
+                <button onclick="quadrado()">Calcular</button>
             </div>
 
                 <div class="caixa">
-                    <h2>losango</h2>
-                    <input type="number" id="diagonal1-losango" placeholder="Diagonal 1">
-                    <input type="number" id="diagonal2-losango" placeholder="Diagonal 2">
-                    <button onclick="losango()">Calcular</button>
+                    <h2>Retângulo</h2>
+                    <input type="number" id="base-retangulo" placeholder="Base">
+                    <input type="number" id="altura-retangulo" placeholder="Altura">
+                    <button onclick="retangulo()">Calcular</button>
                 </div>
 
                 <div class="caixa">
-                    <h2>Circulo</h2>
-                    <input type="number" id="raio-circulo" placeholder="Raio">
-                    <button onclick="circulo()">Calcular</button>
+                    <h2>Trapézio</h2>
+                    <input type="number" id="base1-trapezio" placeholder="Base 1">
+                    <input type="number" id="base2-trapezio" placeholder="Base 2">
+                    <input type="number" id="altura-trapezio" placeholder="Altura">
+                    <button onclick="trapezio()">Calcular</button>
                 </div>
 
-                <div class="caixa">
-                    <h2>Paralelogramo</h2>
-                    <input type="number" id="base-paralelogramo" placeholder="Base">
-                    <input type="number" id="altura-paralelogramo" placeholder="Altura">
-                    <button onclick="paralelogramo()">Calcular</button>
-                </div>
-
-                <div class="caixa">
-                    <h2>Setor Circular</h2>
-                    <input type="number" id="raio-setor" placeholder="Raio">
-                    <input type="number" id="angulo-setor" placeholder="Ângulo (graus)">
-                    <button onclick="setorcircular()">Calcular</button>
-                </div>
-
-                <div class="caixa">
-                    <h2>Coroa Circular</h2>
-                    <input type="number" id="raio-externo-coroa" placeholder="Raio Externo">
-                    <input type="number" id="raio-interno-coroa" placeholder="Raio Interno">
-                    <button onclick="coroacircular()">Calcular</button>
+                    <div class="caixa">
+                        <h2>losango</h2>
+                        <input type="number" id="diagonal1-losango" placeholder="Diagonal 1">
+                        <input type="number" id="diagonal2-losango" placeholder="Diagonal 2">
+                        <button onclick="losango()">Calcular</button>
                     </div>
 
                     <div class="caixa">
-                        <h2>elipse</h2>
-                        <input type="number" id="raio-maior-elipse" placeholder="Raio Maior">
-                        <input type="number" id="raio-menor-elipse
-                        " placeholder="Raio Menor">
-                        <button onclick="elipse()">Calcular</button>
+                        <h2>Circulo</h2>
+                        <input type="number" id="raio-circulo" placeholder="Raio">
+                        <button onclick="circulo()">Calcular</button>
                     </div>
+
                     <div class="caixa">
-                        <h2>Polígono Regular</h2>
-                        <input type="number" id="num-lados-poligono" placeholder="Número de Lados">
-                        <input type="number" id="lado-poligono" placeholder="Lado">
-                        <button onclick="poligonoRegular()">Calcular</button>
+                        <h2>Paralelogramo</h2>
+                        <input type="number" id="base-paralelogramo" placeholder="Base">
+                        <input type="number" id="altura-paralelogramo" placeholder="Altura">
+                        <button onclick="paralelogramo()">Calcular</button>
                     </div>
 
+                    <div class="caixa">
+                        <h2>Setor Circular</h2>
+                        <input type="number" id="raio-setor" placeholder="Raio">
+                        <input type="number" id="angulo-setor" placeholder="Ângulo (graus)">
+                        <button onclick="setorcircular()">Calcular</button>
+                    </div>
+
+                    <div class="caixa">
+                        <h2>Coroa Circular</h2>
+                        <input type="number" id="raio-externo-coroa" placeholder="Raio Externo">
+                        <input type="number" id="raio-interno-coroa" placeholder="Raio Interno">
+                        <button onclick="coroacircular()">Calcular</button>
+                        </div>
+
+                        <div class="caixa">
+                            <h2>elipse</h2>
+                            <input type="number" id="raio-maior-elipse" placeholder="Raio Maior">
+                            <input type="number" id="raio-menor-elipse
+                            " placeholder="Raio Menor">
+                            <button onclick="elipse()">Calcular</button>
+                        </div>
+                        <div class="caixa">
+                            <h2>Polígono Regular</h2>
+                            <input type="number" id="num-lados-poligono" placeholder="Número de Lados">
+                            <input type="number" id="lado-poligono" placeholder="Lado">
+                            <button onclick="poligonoRegular()">Calcular</button>
+                        </div>
+
+            
         
+        </div>a
+
+        <div class="resultado" id="resultado"></div>
         
-    </div>a
+        <script src="script.js"></script>
 
-    <div class="resultado" id="resultado"></div>
-    
-    <script src="script.js"></script>
-
-    <!-- Quadrado,retangulo,triângulo,trapézio,círculo,paralelogramo,losango,setor,circular,coroa sircular,elipse, poligono regular -->
-</body>
-</html>
-
-<!-- <div class="caixa">
-    <h2>Área do Triângulo</h2>
-    <input type="number" id="base-triangulo" placeholder="Base">
-    <input type="number" id="altura-triangulo" placeholder="Altura">
-    <button onclick="areatriangulo()">Calcular</button>
-</div>
-
-<div class="caixa">
-    <h2>Área do Triângulo</h2>
-    <input type="number" id="base-triangulo" placeholder="Base"> a
-    <input type="number" id="altura-triangulo" placeholder="Altura">
-    <button onclick="areatriangulo()">Calcular</button>
-</div>
-<div class="caixa">
-    <h2>Área do Triângulo</h2>
-    <input type="number" id="base-triangulo" placeholder="Base">
-    <input type="number" id="altura-triangulo" placeholder="Altura">
-    <button onclick="areatriangulo()">Calcular</button>
-</div>
-<div class="caixa">
-    <h2>Área do Triângulo</h2>
-    <input type="number" id="base-triangulo" placeholder="Base">
-    <input type="number" id="altura-triangulo" placeholder="Altura">
-    <button onclick="areatriangulo()">Calcular</button>
-</div>
-<div class="caixa">
-    <h2>Área do Triângulo</h2>
-    <input type="number" id="base-triangulo" placeholder="Base">
-    <input type="number" id="altura-triangulo" placeholder="Altura">
-    <button onclick="areatriangulo()">Calcular</button>
-</div>
-<div class="caixa">
-    <h2>Área do Triângulo</h2>
-    <input type="number" id="base-triangulo" placeholder="Base">
-    <input type="number" id="altura-triangulo" placeholder="Altura">
-    <button onclick="areatriangulo()">Calcular</button>
-</div>
-<div class="caixa">
-    <h2>Área do Triângulo</h2>
-    <input type="number" id="base-triangulo" placeholder="Base">
-    <input type="number" id="altura-triangulo" placeholder="Altura">
-    <button onclick="areatriangulo()">Calcular</button>
-</div>
-<div class="caixa">
-    <h2>Área do Triângulo</h2>
-    <input type="number" id="base-triangulo" placeholder="Base">
-    <input type="number" id="altura-triangulo" placeholder="Altura">
-    <button onclick="areatriangulo()">Calcular</button>
-</div>
-<div class="caixa">
-    <h2>Área do Triângulo</h2>
-    <input type="number" id="base-triangulo" placeholder="Base">
-    <input type="number" id="altura-triangulo" placeholder="Altura">
-    <button onclick="areatriangulo()">Calcular</button>
-</div> -->
-
-
+        <!-- Quadrado,retangulo,triângulo,trapézio,círculo,paralelogramo,losango,setor,circular,coroa sircular,elipse, poligono regular -->
+    </body>
+    </html>
